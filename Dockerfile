@@ -9,7 +9,8 @@ RUN apk --no-cache add \
         git \
         curl \
         python \
-        py-pip
+        py-pip \
+        openssh-client
 
 RUN pip install --upgrade pip \
         awsebcli \
