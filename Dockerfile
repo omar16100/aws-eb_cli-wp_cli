@@ -8,14 +8,16 @@ RUN apk --no-cache add \
         jq \
         git \
         curl \
-        python \
-        py-pip \
+        python3 \
+        python3-pip \
         openssh-client
 
-RUN pip install --upgrade pip \
+# Install awsebcli & awscli
+RUN pip3 install --upgrade pip \
         awsebcli \
         awscli
 
+# Route53
 RUN curl -L https://github.com/barnybug/cli53/releases/download/0.8.7/cli53-linux-386 > /usr/bin/cli53 && \
     chmod +x /usr/bin/cli53
 
