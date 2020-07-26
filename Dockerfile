@@ -1,4 +1,4 @@
-# Docker file to run AWS EB CLI tools.
+# Docker file to run AWS EB CLI & WP CLI
 FROM alpine
 
 RUN apk --no-cache add \
